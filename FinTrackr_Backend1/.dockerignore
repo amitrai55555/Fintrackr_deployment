@@ -1,0 +1,9 @@
+.git
+.gitignore
+.idea
+.mvn
+target
+apache-maven-3.9.6
+http-client.env.json
+README*
+*.log
