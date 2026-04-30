@@ -1,9 +1,17 @@
 .git
 .gitignore
 .idea
+.vscode
 .mvn
+.env
+.env.*
 target
+apache-maven.zip
 apache-maven-3.9.6
+uploads
 http-client.env.json
+test-requests.http
 README*
+*.md
 *.log
+*.iml

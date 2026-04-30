@@ -1,2 +1,25 @@
+# Environment
 .env
 .env.*
+
+# Build output
+target/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Maven archive (should not be in repo)
+apache-maven.zip
+apache-maven-3.9.6/
+
+# Uploads
+uploads/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
