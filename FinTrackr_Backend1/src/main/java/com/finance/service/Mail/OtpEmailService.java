@@ -1,7 +1,7 @@
 package com.finance.service.Mail;
 
 import com.finance.entity.User;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -16,12 +16,10 @@ public class OtpEmailService {
     private final String testRecipient;
     private final String fromAddress;
 
-    public OtpEmailService(JavaMailSender mailSender,
-                           @Value("${app.mail.test-recipient:}") String testRecipient,
-                           @Value("${spring.mail.username:FinTrackrTech@gmail.com}") String fromAddress) {
+    public OtpEmailService(JavaMailSender mailSender, Environment environment) {
         this.mailSender = mailSender;
-        this.testRecipient = testRecipient != null ? testRecipient.trim() : "";
-        this.fromAddress = fromAddress;
+        this.testRecipient = environment.getProperty("app.mail.test-recipient", "").trim();
+        this.fromAddress = environment.getProperty("spring.mail.username", "FinTrackrTech@gmail.com");
     }
 
     public void sendOtpVerificationEmail(User user, String otp) {

@@ -3,9 +3,10 @@
 .idea
 .vscode
 .mvn
+target
+node_modules
 .env
 .env.*
-target
 apache-maven.zip
 apache-maven-3.9.6
 uploads
@@ -15,3 +16,5 @@ README*
 *.md
 *.log
 *.iml
+agent-transcripts
+terminals
